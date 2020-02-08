@@ -34,7 +34,7 @@ export class AgregaPersonaComponent implements OnInit {
 
     this.personaService.personaAgrega(this.persona)
         .subscribe(
-          data => {
+          (data:any) => {
             this.exito = true;
             this.persona = data;
 
