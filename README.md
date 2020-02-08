@@ -1,3 +1,13 @@
+
+req: npm nodejs
+-hacer un "npm up"
+-luego "ng serve --open"
+-url: http://localhost:4200/persona
+
+
+
+
+
 # Fecumpleanos
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.0.
