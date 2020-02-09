@@ -23,6 +23,17 @@ export class AgregaPersonaComponent implements OnInit {
   enviar(){
 
       this.guardarPersona()
+  }
+
+
+  limpia(){
+    this.exito = false;
+    this.siMensaje = false;
+    this.persona.nombre = null;
+    this.persona.apellido = null;
+    this.persona.fechaNacimiento = null;
+    this.persona.edad = null;
+    this.persona.mensaje = null;
 
 
   }
