@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Persona } from "../models/Persona";
 import { PersonaService } from "../services/persona.service";
+import { NgxSpinnerService } from "ngx-spinner";
 
 @Component({
   selector: 'app-agrega-persona',
@@ -14,7 +15,7 @@ export class AgregaPersonaComponent implements OnInit {
   siMensaje: boolean = false;
 
 
-  constructor(private personaService: PersonaService) { }
+  constructor(private personaService: PersonaService, private spinnerService: NgxSpinnerService) { }
 
   ngOnInit() {
   }
@@ -30,7 +31,7 @@ export class AgregaPersonaComponent implements OnInit {
 
 
     console.log(this.persona)
-
+    this.spinnerService.show();
 
     this.personaService.personaAgrega(this.persona)
         .subscribe(
@@ -43,6 +44,7 @@ export class AgregaPersonaComponent implements OnInit {
             }
 
             console.log(data)
+            this.spinnerService.hide();
           }
         )
 

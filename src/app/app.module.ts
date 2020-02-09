@@ -8,6 +8,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { PersonaComponent } from './persona/persona.component';
 import { AgregaPersonaComponent } from './agrega-persona/agrega-persona.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
