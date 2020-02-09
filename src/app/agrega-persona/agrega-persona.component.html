@@ -37,21 +37,21 @@
             </div>
 
 
-              <div class="row" *ngIf="exito" >
-                <div class="col-sm-6 form-group">
-                   <label>Edad</label>
-                   <input type="text" class="form-control" id="Edad" name="Edad" [(ngModel)]="persona.edad" readonly="readonly">
-                </div>
-              </div>
-              <div class="row" *ngIf="siMensaje" >
-                <div class="col-sm-6 form-group">
-                   <label>Mensaje</label>
-                   <textarea  type="text" class="form-control" name="mensaje" [(ngModel)]="persona.mensaje" rows="8" cols="500" readonly="readonly">
-                  </textarea>
-                </div>
-             </div>
+
+
            </div>
         </form>
+
+        <div class="row">
+         <br>
+        </div>
+
+        <div class="row">
+         <h3 class="text-info">Tu edad es: {{persona.edad}}</h3>
+         <h3 *ngIf="siMensaje" class="text-info">Hoy es tu cumpleaños te dedico este poema:</h3>
+         <h3 *ngIf="siMensaje" class="text-success">{{persona.mensaje}}</h3>
+
+         </div>
 
         <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
          <p style="color: white">Cargando. </p>
